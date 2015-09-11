@@ -86,7 +86,9 @@
       restrict : 'E',
       replace: true,
       transclude : true,
-      template: "<img ng-transclude/>",
+      template: '<video controls>' +
+                  '<source ng-transclude type="video/mp4">' +
+                '</video>',
       scope: {},
       priority: 99,
       controller: Controller,
@@ -129,6 +131,7 @@
         var loadImage = function() {
           var url = $.cloudinary.url(publicId, attributes);
           element.attr('src', url);
+          console.log(url);
         }
 
       }
