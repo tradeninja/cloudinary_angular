@@ -86,9 +86,7 @@
       restrict : 'E',
       replace: true,
       transclude : true,
-      template: '<video controls>' +
-                  '<source ng-transclude type="video/mp4">' +
-                '</video>',
+      template: "<img ng-transclude/>",
       scope: {},
       priority: 99,
       controller: Controller,
