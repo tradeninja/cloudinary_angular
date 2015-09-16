@@ -129,7 +129,7 @@
         var loadImage = function() {
           var url = $.cloudinary.url(publicId, attributes);
           element.attr('src', url);
-          console.log(url + 'updateded');
+          console.log(url + 'asdff');
         }
 
       }
