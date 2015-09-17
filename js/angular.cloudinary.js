@@ -86,7 +86,7 @@
       restrict : 'E',
       replace: true,
       transclude : true,
-      template: "<video autoplay ng-transclude>" + "</video>",
+      template: "<video autoplay ng-transclude>" + "<source></source>" + "</video>",
       scope: {},
       priority: 99,
       controller: Controller,
