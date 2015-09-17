@@ -86,7 +86,7 @@
       restrict : 'E',
       replace: true,
       transclude : true,
-      template: "<ng-transclude></ng-transclude>",
+      template: element,
       scope: {},
       priority: 99,
       controller: Controller,
@@ -132,9 +132,9 @@
           var video = $.cloudinary.video(publicId, attributes);
           // element.attr('poster', url);
           // element.appendChild(video);
-          element = video;
+          document.appendChild(video);
 
-          console.log(element);
+          // console.log(element);
           console.log(url + 'asdsdgfdfgssdff');
         };
 
