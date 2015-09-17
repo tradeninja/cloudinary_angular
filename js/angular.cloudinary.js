@@ -127,10 +127,13 @@
         }
 
         var loadImage = function() {
+
           var url = $.cloudinary.url(publicId, attributes);
           element.attr('poster', url);
+          var video = $.cloudinary.video(publicId, attributes);
+          console.log(video);
           console.log(url + 'asdsdgfdfgssdff');
-        }
+        };
 
       }
     };
