@@ -129,8 +129,9 @@
 
           var url = $.cloudinary.url(publicId, attributes);
           var video = $.cloudinary.video(publicId, attributes);
+          console.log(video);
           // element.attr('poster', url);
-          element.html(video);
+          //element.html(video);
 
           // console.log(element);
           console.log(url + 'asdsdgfdfgssdff');
