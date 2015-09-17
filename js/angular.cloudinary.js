@@ -128,7 +128,7 @@
 
         var loadImage = function() {
           var url = $.cloudinary.url(publicId, attributes);
-          element.attr('src', url);
+          element.attr('poster', url);
           console.log(url + 'asdsdgfdfgssdff');
         }
 
