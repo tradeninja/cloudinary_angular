@@ -133,7 +133,7 @@
           // element.attr('poster', url);
           element = video;
 
-          console.log(video);
+          console.log(element);
           console.log(url + 'asdsdgfdfgssdff');
         };
 
