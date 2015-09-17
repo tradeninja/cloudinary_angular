@@ -86,7 +86,6 @@
       restrict : 'E',
       replace: true,
       transclude : true,
-      template: element,
       scope: {},
       priority: 99,
       controller: Controller,
@@ -131,7 +130,7 @@
           var url = $.cloudinary.url(publicId, attributes);
           var video = $.cloudinary.video(publicId, attributes);
           // element.attr('poster', url);
-          // element.appendChild(video);
+          element.html(video);
           document.appendChild(video);
 
           // console.log(element);
