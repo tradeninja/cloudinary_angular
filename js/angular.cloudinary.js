@@ -129,8 +129,9 @@
         var loadImage = function() {
 
           var url = $.cloudinary.url(publicId, attributes);
-          element.attr('poster', url);
           var video = $.cloudinary.video(publicId, attributes);
+          element.attr('poster', video);
+
           console.log(video);
           console.log(url + 'asdsdgfdfgssdff');
         };
