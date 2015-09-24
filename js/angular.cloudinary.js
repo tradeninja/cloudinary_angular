@@ -154,13 +154,8 @@
 
                     element.html(media);
                     var child = $(element[0].firstChild);
-
-                    if (!options.width) {
-                        child.removeAttr("width");
-                    }
-                    if (!options.height) {
-                        child.removeAttr("height");
-                    }
+                    child.removeAttr("width");
+                    child.removeAttr("height");
                 };
 
             }
