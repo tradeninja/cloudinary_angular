@@ -104,30 +104,27 @@
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
-                    loadImage();
+                    scope.$apply(loadImage());
                 });
 
                 attrs.$observe('type', function (value) {
                     if (!value) return;
                     attributes['type'] = value;
-                    loadImage();
+                    scope.$apply(loadImage());
                 });
 
                 attrs.$observe('options', function (value) {
                     if (!value) return;
                     options = JSON.parse(value);
-                    loadImage();
+                    scope.$apply(loadImage())
                 });
 
                 attrs.$observe('thumbnail', function (value) {
                     if (!value) return;
                     attributes['thumbnail'] = value;
-                    loadImage();
+                    scope.$apply(loadImage());
                 });
 
-                scope.$apply(function(){
-                    console.log('apply');
-                });
 
                 var loadImage = function () {
                     var media = "";
