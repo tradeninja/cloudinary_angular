@@ -101,8 +101,8 @@
                     attributes[cloudinaryAttr(name)] = value
                 });
 
-                scope.$watchGroup([attrs.publicId, attrs.type, attrs.options, attrs.thumbnail], function(){
-                    console.log('try dude');
+                scope.$watchGroup([attrs.publicId, attrs.type, attrs.options, attrs.thumbnail], function(values){
+                    console.log('try dude', values);
                 });
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
@@ -113,7 +113,7 @@
                 attrs.$observe('type', function (value) {
                     if (!value) return;
                     attributes['type'] = value;
-                    scope.$apply(loadImage());
+                    //scope.$apply(loadImage());
                 });
 
                 attrs.$observe('options', function (value) {
