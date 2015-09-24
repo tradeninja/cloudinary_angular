@@ -105,21 +105,17 @@
                     attributes.transformation = scope.transformations;
                 }
 
-                // store public id and load image
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
                     loadImage();
                 });
 
-                // observe and update version attribute
                 attrs.$observe('version', function (value) {
                     if (!value) return;
                     attributes['version'] = value;
                     loadImage();
                 });
-                //
-
 
                 attrs.$observe('type', function (value) {
                     if (!value) return;
@@ -144,12 +140,12 @@
                     var media = "";
 
                     if ((!attrs.type || attrs.type === 'image')) {
-                        media = $.cloudinary.image(publicId, options);
+                        media = $.cloudinary.image(publicId + '.jpg', options);
                     } else if (attrs.type === 'video' && !attrs.thumbnail) {
                         options.controls = true;
                         media = $.cloudinary.video(publicId, options);
                     } else if (attrs.type === 'video' && attrs.thumbnail === "thumbnail") {
-                        media = $.cloudinary.image($.cloudinary.video_thumbnail_url(publicId, options));
+                        media = $.cloudinary.image($.cloudinary.video_thumbnail_url(publicId + '.jpg', options));
                     }
 
                     element.html(media);
