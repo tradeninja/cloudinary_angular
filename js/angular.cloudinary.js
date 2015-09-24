@@ -101,6 +101,9 @@
                     attributes[cloudinaryAttr(name)] = value
                 });
 
+                scope.$watchGroup([attrs.publicId, attrs.type, attrs.options, attrs.thumbnail], function(){
+                    console.log('try dude');
+                });
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
