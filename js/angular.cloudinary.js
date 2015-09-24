@@ -101,19 +101,9 @@
                     attributes[cloudinaryAttr(name)] = value
                 });
 
-                if (scope.transformations) {
-                    attributes.transformation = scope.transformations;
-                }
-
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
-                    loadImage();
-                });
-
-                attrs.$observe('version', function (value) {
-                    if (!value) return;
-                    attributes['version'] = value;
                     loadImage();
                 });
 
@@ -135,17 +125,20 @@
                     loadImage();
                 });
 
+                scope.$apply(function(){
+                    console.log('apply');
+                });
 
                 var loadImage = function () {
                     var media = "";
 
-                    if ((!attrs.type || attrs.type === 'image')) {
-                        media = $.cloudinary.image(publicId + '.jpg', options);
+                    if ((!attrs.type || attrs.type === "image")) {
+                        media = $.cloudinary.image(publicId + ".jpg", options);
                     } else if (attrs.type === 'video' && !attrs.thumbnail) {
                         options.controls = true;
                         media = $.cloudinary.video(publicId, options);
                     } else if (attrs.type === 'video' && attrs.thumbnail === "thumbnail") {
-                        media = $.cloudinary.image($.cloudinary.video_thumbnail_url(publicId + '.jpg', options));
+                        media = $.cloudinary.image($.cloudinary.video_thumbnail_url(publicId + ".jpg", options));
                     }
 
                     element.html(media);
