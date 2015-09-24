@@ -33,11 +33,13 @@
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
+                    loadImage();
                 });
 
                 attrs.$observe('type', function (value) {
                     if (!value) return;
                     attributes['type'] = value;
+                    loadImage();
                 });
 
                 attrs.$observe('options', function (value) {
@@ -49,6 +51,7 @@
                 attrs.$observe('thumbnail', function (value) {
                     if (!value) return;
                     attributes['thumbnail'] = value;
+                    loadImage();
                 });
 
 
