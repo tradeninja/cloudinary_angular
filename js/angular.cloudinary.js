@@ -30,10 +30,6 @@
                 var options = {};
                 var publicId = null;
 
-                $.each(attrs, function (name, value) {
-                    attributes[cloudinaryAttr(name)] = value
-                });
-
                 attrs.$observe('publicId', function (value) {
                     if (!value) return;
                     publicId = value;
