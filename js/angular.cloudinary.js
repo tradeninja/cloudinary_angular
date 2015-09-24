@@ -15,6 +15,8 @@
     var angularModule = angular.module('cloudinary', []);
 
     angularModule.directive('clImage', [function () {
+        var Controller = function ($scope) {};
+        Controller.$inject = ['$scope'];
         return {
             restrict: 'E',
             replace: true,
