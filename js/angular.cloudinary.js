@@ -54,6 +54,12 @@
                     loadImage();
                 });
 
+                attrs.$observe('player', function (value) {
+                    if (!value) return;
+                    attributes['player'] = value;
+                    loadImage();
+                });
+
 
                 var loadImage = function () {
                     var media = "";
@@ -61,8 +67,15 @@
                     if ((!attrs.type || attrs.type === "image")) {
                         media = $.cloudinary.image(publicId + ".jpg", options);
                     } else if (attrs.type === 'video' && !attrs.thumbnail) {
-                        options.controls = true;
+
+                        if (attrs.player === "player") {
+                          options.controls = true;
+                        } else {
+                          options.controls = false;
+                        }
+
                         media = $.cloudinary.video(publicId, options);
+                        
                     } else if (attrs.type === 'video' && attrs.thumbnail === "thumbnail") {
                         media = $.cloudinary.image($.cloudinary.video_thumbnail_url(publicId + ".jpg", options));
                     }
