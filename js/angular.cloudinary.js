@@ -65,7 +65,12 @@
                     var media = "";
 
                     if ((!attrs.type || attrs.type === "image")) {
-                        media = $.cloudinary.image(publicId + ".jpg", options);
+                        
+                        if (options && options.default-image) {
+                            media = $.cloudinary.image(publicId + ".jpg", options);
+                        }
+
+                        
                     } else if (attrs.type === 'video' && !attrs.thumbnail) {
 
                         if (attrs.player === "player") {
