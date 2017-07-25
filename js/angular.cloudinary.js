@@ -66,7 +66,7 @@
 
                     if ((!attrs.type || attrs.type === "image")) {
                         
-                        if (options && options.default-image) {
+                        if (options && options["default-image"]) {
                             media = $.cloudinary.image(publicId + ".jpg", options);
                         }
 
