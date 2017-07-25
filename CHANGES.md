@@ -1,3 +1,99 @@
+2017-07-25, Version 0.1.7
+=========================
+
+ * Fixed duplicate image loading bug (opamint)
+
+
+2015-09-28, Version 0.1.6
+=========================
+
+ * controls logic (kweestian)
+
+ * update directive (Thomas Thiery)
+
+ * reclean directive (Thomas Thiery)
+
+ * clean directive (Thomas Thiery)
+
+ * clean the directive (Thomas Thiery)
+
+ * test apply6 (Thomas Thiery)
+
+ * test apply5 (Thomas Thiery)
+
+ * test apply4 (Thomas Thiery)
+
+ * test apply3 (Thomas Thiery)
+
+ * test apply2 (Thomas Thiery)
+
+ * test apply (Thomas Thiery)
+
+ * add format image (Thomas Thiery)
+
+ * remove properties width and height (Thomas Thiery)
+
+ * update gitignore (Thomas Thiery)
+
+ * remove output width height (Thomas Thiery)
+
+ * ignore .idea (Thomas Thiery)
+
+ * merge with the new code (Thomas Thiery)
+
+ * added logic to handle generating video tag in the same function as before (kweestian)
+
+ * trytr b (Thomas Thiery)
+
+ * erwfgieik fhdfi (Thomas Thiery)
+
+ * commit de merde23 (kweestian)
+
+ * commit de merde22 (kweestian)
+
+ * commit de merde21 (kweestian)
+
+ * commit de merde20 (kweestian)
+
+ * commit de merde19 (kweestian)
+
+ * commit de merde18 (kweestian)
+
+ * commit de merde17 (kweestian)
+
+ * commit de merde16 (kweestian)
+
+ * commit de merde14 (kweestian)
+
+ * commit de merde13 (kweestian)
+
+ * commit de merde12 (kweestian)
+
+ * commit de merde111 (kweestian)
+
+ * commit de merde10 (kweestian)
+
+ * commit de merde9 (kweestian)
+
+ * commit de merde8 (kweestian)
+
+ * commit de merde7 (kweestian)
+
+ * commit de merde6 (kweestian)
+
+ * commit de merde5 (kweestian)
+
+ * commit de merde4 (kweestian)
+
+ * commit de merde2 (kweestian)
+
+ * commit de merde (kweestian)
+
+ * console log url and a string (kweestian)
+
+ * Update bower.json (Christian Hamelin)
+
+
 2015-09-11, Version 0.1.5
 =========================
 
